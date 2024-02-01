@@ -1,0 +1,233 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--whiteColorDeam);
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(2, 15, 29, 0.242);
+}
+.header .logo {
+  color: var(--blackColor);
+  font-weight: 600;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo .img {
+  color: var(--PrimaryColor);
+  transform: translateY(5px);
+}
+
+.header .logoDiv .logo img {
+  width: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  .header .navBar {
+    position: absolute;
+    background: var(--whiteColorDeam);
+    height: max-content;
+    width: 80%;
+    border-radius: 1rem;
+    top: -600rem;
+    left: 50%;
+    padding: 1rem;
+    transform: translate(-50%);
+    z-index: 2000;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+    transition: 0.5s ease-in-out;
+  }
+  .header .navBar .navLists {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    padding: 0.5rem 0;
+  }
+  .header .navBar .navLists .navItem {
+    padding: 0.5rem 0;
+  }
+  .header .navBar .navLists .navItem .navLink {
+    color: var(--textColor);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .header .navBar .navLists .navItem .navLink:hover {
+    color: var(--PrimaryColor);
+  }
+  .header .navBar .navLists .btn {
+    margin-top: 1rem;
+  }
+  .header .navBar .navLists .btn a {
+    font-weight: 600;
+    color: var(--whiteColor);
+  }
+  .header .navBar .closeNavbar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: var(--SecondaryColor);
+  }
+  .header .navBar .closeNavbar:hover {
+    color: var(--SecondaryColor);
+  }
+  .header .activeNavbar {
+    top: 6rem;
+  }
+}
+.header .toggleNavbar .icon {
+  font-size: 25px;
+  color: var(--PrimaryColor);
+}
+.header .toggleNavbar:hover {
+  color: var(--SecondaryColor);
+}
+
+@media screen and (min-width: 769px) {
+  .toggleNavbar,
+  .closeNavbar {
+    display: none;
+  }
+  /* .header {
+    padding: 1.5rem 2rem;
+  } */
+  .header .navBar .navLists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .header .navBar .navLists .navItem .navLink {
+    color: var(--textColor);
+    padding: 0 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  /* .header .navBar .navLists .navItem .navLink:hover {
+    color: var(--PrimaryColor);
+  } */
+  .header .navBar .navLists .btn {
+    margin-left: 1rem;
+  }
+  .header .navBar .navLists .btn a {
+    color: var(--whiteColor) !important;
+    font-weight: 500;
+  }
+}
+
+/*
+@media screen and (min-width: 960px) {
+  .header .navBar .navLists .navItem {
+    padding: 0 0.7rem;
+  }
+} 
+@media screen and (min-width: 1240px) { 
+   .header {
+    padding: 1rem 8.5rem;
+  } 
+} */
+
+/* start NavBar link style for bottom line */
+
+.li {
+  cursor: pointer;
+  position: relative;
+}
+
+.li::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  bottom: -5px;
+  left: 20px;
+  transform: scaleX(0);
+  /* box-shadow:
+      0 5px 0 #E8476A,
+      0 10px 0 purple; */
+  background: var(--PrimaryColor);
+  transform-origin: center;
+  transition: transform 0.5s ease-out;
+}
+
+.li:hover::after {
+  color: var(--blackColor);
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* end NavBar link style for bottom line */
+
+/* close button in model box */
+.button {
+  position: relative;
+  width: 2em;
+  height: 2em;
+  border: none;
+  background: #031b4e70;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.X {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1.5px;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1.5px;
+  background-color: #fff;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  top: -70%;
+  left: 50%;
+  width: 3em;
+  height: 1.7em;
+  font-size: 12px;
+  background-color: rgb(19, 22, 24);
+  color: rgb(187, 229, 236);
+  border: none;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.button:hover {
+  background-color: var(--PrimaryColor);
+}
+
+.button:active {
+  background-color: var(--SecondaryColor);
+}
+
+.button:hover > .close {
+  animation: close 0.2s forwards 0.25s;
+}
+
+@keyframes close {
+  100% {
+    opacity: 1;
+  }
+}
+
+/* close button in model box end */

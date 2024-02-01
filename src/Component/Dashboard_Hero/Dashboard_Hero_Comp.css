@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.hero-banner {
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(
+    127.68% 2996.56% at 12.65% 127.68%,
+    #00000044 0%,
+    #222222 100%
+  );
+  width: 100%;
+  height: 60vh;
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-size: cover;
+  margin: 0 auto;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.home {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+/* .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(
+    127.68% 2996.56% at 12.65% 127.68%,
+    #00000044 0%,
+    #222222 100%
+  );
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  mix-blend-mode: hard-light;
+}*/
+video {
+  position: absolute;
+  height: 60vh;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  object-fit: cover;
+  background-position: center;
+}
+
+.hero-title {
+  color: #ffffff;
+  text-align: left;
+  position: absolute;
+  top: 10vh;
+  left: 16.5%;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+
+.height {
+  height: 200vh;
+}
+
+.search_btn {
+  border: none;
+  box-shadow: -4px 4px 0 var(--PrimaryColor);
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  transition: 0.2s ease-in-out;
+  background: radial-gradient(
+    127.68% 2996.56% at 12.65% 127.68%,
+    #000000 0%,
+    #222222 100%
+  );
+}
+
+.search_btn:hover {
+  box-shadow: none;
+}
+
+.hrLine {
+  width: 20%;
+  border: 1px solid black !important;
+  position: absolute;
+  z-index: 0;
+  left: 11%;
+  top: 50%;
+}
+
+.tab_box {
+  line-height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--whiteColor);
+  position: relative;
+}
+
+.tab_box .tab_btn {
+  font-size: 13px;
+  color: #919191;
+  background: none;
+  border: none;
+  /* padding: 0 10px; */
+  cursor: pointer;
+}
+
+.content_box {
+  padding: 20px;
+  background-color: #f2f4f6;
+}
+
+.content_box .content {
+  display: none;
+  animation: moving 0.5s ease;
+}
+
+@keyframes moving {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.actives {
+  border-bottom: 2px solid var(--blackColor) !important;
+  color: var(--blackColor) !important;
+}
+
+.active {
+  display: block !important;
+}
+
+.content_box .content h2 {
+  margin-bottom: 10px;
+}
+
+.line {
+  position: absolute;
+  top: 38px;
+  left: 13px;
+  width: 95px;
+  height: 3px;
+  background-color: var(--blackColor);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.posit {
+  position: absolute;
+  flex: 0 0 auto;
+  width: 80%;
+  top: 45vh;
+}
+
+.inputbox {
+  font-style: normal;
+  box-sizing: border-box;
+  margin: 0 16px;
+  border: none;
+  background-color: transparent;
+}
+
+.inputdiv {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.inputbox:focus {
+  border: 0;
+  outline: 0;
+}
+
+.greencircle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #92c83e;
+}
+
+.redcirlce {
+  background-color: #e97550;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.currentlocationbtn {
+  border: none;
+  background-color: transparent;
+}
+
+.notclicked {
+  color: #919191;
+}
+
+.clicked {
+  color: #92c83e;
+}
+
+.mobile_sc {
+  position: absolute;
+  top: -180px;
+}
+
+.css-a643pv-MuiStack-root{
+  padding: 0px !important;
+  width: 100%;
+}
+
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root{
+  border-radius: 0px !important;
+  background-color: #fff !important;
+}
+
+
+
+
+
+/* Radio Button Start */
+
+.label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.label:hover,
+.label:focus-within,
+.label:checked {
+  background: hsla(0, 0%, 39%, 0.14);
+}
+
+.radio-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.radio-design {
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+  background: linear-gradient(
+    to right bottom,
+    hsl(154, 97%, 62%),
+    hsl(225, 97%, 62%)
+  );
+  position: relative;
+}
+
+.radio-design::before {
+  content: "";
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.radio-input:checked + .radio-design::before {
+  transform: scale(0);
+}
+
+.label-text {
+  color: var(--grayText);
+  margin-left: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
+  /* font-weight: 900; */
+  transition: 0.3s;
+}
+
+.radio-input:checked ~ .label-text {
+  color: hsl(0, 0%, 40%);
+}
+
+/* Radio Button End */
+
+@media screen and (max-width: 340px) {
+  .tab_box .tab_btn {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .hrLine {
+    width: 85% !important;
+    margin: 0 0 0 45px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-banner {
+    overflow: visible !important;
+  }
+
+  .tab_box {
+    background-color: #f2f4f6;
+  }
+
+  .inputdiv {
+    border: none !important;
+    width: 96%;
+    padding: 15px 0 !important;
+  }
+  .content_box {
+    background-color: white;
+  }
+  .hrLine {
+    z-index: 5;
+    margin: 0;
+    position: static;
+    width: 100%;
+  }
+  .divline {
+    padding: 0 0 0 65px;
+  }
+  .search_btn {
+    padding: 15px;
+  }
+
+  .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+    border: none !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero-banner {
+    clip-path: none;
+    height: 60vh;
+  }
+  .greencircle {
+    width: 8px;
+    height: 8px;
+  }
+  .redcirlce {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Sample Start */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--bg: #301e4e;
+	--headline: #ffffff;
+	--paragraph: #c9bae2;
+	--cardBG: #463366;
+	--cardText: #cabae2;
+	--activeColor: #ff6e6c;
+	--ff: "Nunito", sans-serif;
+}
+
+body {
+	background: var(--bg);
+	font-family: var(--ff);
+}
+
+.container {
+	max-width: 700px;
+	margin: 80px auto;
+}
+
+.tabs__content {
+	padding: 30px;
+	color: var(--paragraph);
+	font-family: inherit;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.4;
+	background: var(--cardBG);
+}
+
+.tabs__content h3 {
+	color: var(--headline);
+	font-weight: 700;
+	font-family: inherit;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.tabs__nav {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	padding: 10px 0 30px;
+}
+
+.tabs__button {
+	background: rgba(0, 0, 0, 0);
+	padding: 4px;
+	color: var(--headline);
+	box-shadow: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-size: 20px;
+	display: block;
+	position: relative;
+	font-family: inherit;
+	font-weight: 400;
+}
+
+.tabs__button:after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 100%;
+	height: 2px;
+	background: var(--activeColor);
+	opacity: 0;
+	visibility: hidden;
+	transition: visibility 0s, opacity 0.4s ease-in-out;
+}
+
+.tabs__button.active::after {
+	opacity: 1;
+	visibility: visible;
+	transition: visibility 0s, opacity 0.4s ease-in-out;
+}
+
+.tabs__item:not(:last-child) {
+	margin-right: 20px;
+}
+ */
+
+/* Sample End */

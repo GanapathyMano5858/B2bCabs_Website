@@ -1,0 +1,140 @@
+
+:root {
+  --PrimaryColor: #32c86e;
+  --SecondaryColor: #202020;
+  --gradientColor: linear-gradient(to right, #10b5cb, #0073a8);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: #171717;
+  --textColor: #031b4e;
+  --paraColor: #4d5b7c;
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --grayText: #8b8b8b;
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+  --cardHover: rgb(255, 255, 255);
+
+
+  --line-border-fill: #031b4e;
+  --line-border-empty: #e0e0e0;
+
+  --link: #127384;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.App {
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  font-family: "Outfit", sans-serif;
+}
+
+.btn {
+  padding: 5px 20px;
+  border: unset;
+  border-radius: 5px;
+  color: var(--whiteColor);
+  z-index: 1;
+  background: var(--textColor);
+  position: relative;
+  font-weight: 600;
+  font-size: 17px;
+  /* -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27); */
+  /* box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27); */
+  transition: all 250ms;
+  overflow: hidden;
+  border: 1px solid var(--grayText);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  /* border-radius: 5px; */
+  background-color: #1ecb15;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.btn:hover {
+  color: var(--whiteColor);
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+/* 
+.btn {
+  padding: 10px 15px;
+  margin: 0 0 0 60px;  
+  border: none;
+  font-size: 13px;
+  color: var(--whiteColor);
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.btn {
+  background: rgb(30, 203, 21);
+  box-shadow: 0 0 5px rgb(30, 203, 21);
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px rgb(30, 203, 21);
+}
+
+ @media screen and (max-width: 480px) {
+
+} */
+
+/* PingMe css */
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.icon {
+  font-size: 2.5rem;
+  /* cursor: pointer; */
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}

@@ -1,0 +1,29 @@
+/* .KeyFeatures {
+}
+
+.bgImg {
+  background-image: url(path);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+} */
+.sp {
+  color: var(--PrimaryColor);
+}
+
+.KeyFeatures > :nth-child(1) {
+  color: #031b4e;
+  font-weight: 500;
+  font-family: "Outfit", sans-serif !important;
+  font-size: 40px;
+  text-align: center;
+}
+
+.KeyFeatures > :nth-child(2) {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  color: #4d5b84;
+  text-align: center;
+}
